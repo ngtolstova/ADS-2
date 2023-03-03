@@ -24,25 +24,25 @@ double calcItem(double x, uint16_t n) {
 }
 
 double expn(double x, uint16_t count) {
-  double sum = 0;
+  double res = 0;
   for (uint16_t n = 0; n <= count; n++) {
-    sum += (pown(x, n) / fact(n));
+    res += (pown(x, n) / fact(n));
   }
-  return sum;
+  return res;
 }
 
 double sinn(double x, uint16_t count) {
-  double sum = 0;
-  for (uint16_t n = 0; n <= count; n++) {
-    sum += pown(-1, n - 1) * (pown(x, 2 * n - 1) / fact(2 * n - 1));
+  double sin = 0;
+  for (uint16_t i = 0; i <= count; i++) {
+    sin += pown(-1, i - 1) * (pown(x, 2 * i - 1) / fact(2 * i - 1));
   }
-  return sum;
+  return sin;
 }
 
 double cosn(double x, uint16_t count) {
-  double sum = 0;
-  for (uint16_t n = 0; n <= count; n++) {
-    sum += pown(-1, n - 1) * (pown(x, 2 * n - 2) / fact(2 * n - 2));
+  double cos = 0;
+  for (uint16_t i = 0; i <= count; i++) {
+    cos += pown(-1, i - 1) * (pown(x, 2 * i - 2) / fact(2 * i - 2));
   }
-  return sum;
+  return cos;
 }
